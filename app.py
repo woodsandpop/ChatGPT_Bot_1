@@ -35,7 +35,7 @@ def chatbot():
             model = 'gpt-3.5-turbo',
             engine="text-davinci-002",
             temperature=0.4,
-            max_tokens=64
+            max_tokens=64,
             messages = messages
         )
         system_response=response["choices"][0]["message"]["content"]

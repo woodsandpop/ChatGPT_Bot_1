@@ -1,11 +1,10 @@
 import streamlit as st
 import openai
-from apikey import APIKEY
 from gtts import gTTS  # new import
 from io import BytesIO  # new import
 
 
-openai.api_key = API_KEY
+openai.api_key = "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"
 
 messages=[ 
     {"role": "system", "content": "You are a helpful assistant."}, 

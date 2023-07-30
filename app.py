@@ -2,8 +2,9 @@ import streamlit as st
 import openai
 from gtts import gTTS  # new import
 from io import BytesIO  # new import
+import os
 
-openai.api_key =st.secrets["OPENAI_API_KEY"]
+openai.api_key = os.getenv["OPENAI_API_KEY"]
 
 messages=[ 
     {"role": "system", "content": "You are a helpful assistant."}, 

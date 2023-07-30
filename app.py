@@ -31,7 +31,7 @@ def chatbot():
     searchbutton = st.button("Search")
     if searchbutton:
         response = openai.ChatCompletion.create(
-            model = 'gpt-3.5',
+            model = 'gpt-3.5-turbo',
             messages = messages
         )
         system_response=response["choices"][0]["message"]["content"]
@@ -40,6 +40,5 @@ def chatbot():
         for message in messages:
             st.write(message["content"]) 
         st.audio(text_to_speech(system_response), format="audio/wav")
-
 
 chatbot()
